@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Ejercicio Propuesto Imprimir ordenamiento de arreglo numerico Diego Hoyos
+    // Ingrese en la Variable numeroDeElementos, los caracteres a organizar
+    let inicio=["unacadena",3,9,1,10,500,1,10,true];
+    let x = -1;
+    for (let i = 0; i < inicio.length; i++){
+        x = i;
+        for (let j = i; j <= inicio.length; j++ ){
+            if (inicio[j] < inicio[x]){
+                x = j;
+            }
+        }
+        let temp = inicio[i];
+        inicio[i] = inicio[x];
+        inicio[x] = temp;
+        console.log("Aqui muestra el progreso del ordenamiento ");
+        console.log(inicio);
+    }
+    let numero = inicio.filter(numero => Number.isInteger(numero));
+    console.log("Aqui muestra el resultado final de solo numeros");
+    console.log(numero);
+</script>
+</body>
+</html>
